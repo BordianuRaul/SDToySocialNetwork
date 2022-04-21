@@ -1,3 +1,5 @@
+<pre>
+
 # SDToySocialNetwork
 An application that simulates a social network.
 Reţea de socializare – SDToySocialNetwork
@@ -31,4 +33,4 @@ TAD Mulțime Ordonată cu elemente generice (Template <class T> ) cu reprezentar
 TAD Graf cu reprezentare pe matrice (pt retea) – FACULTATIV – 5 puncte bonus.
 Observație: Se pot defini si alte structuri de date necesare rezolvării problemei.
 
-
+</pre>
