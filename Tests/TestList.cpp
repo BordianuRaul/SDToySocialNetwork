@@ -3,7 +3,7 @@
 //
 
 #include "../Headers/TestList.h"
-#include "../Headers/List.h"
+#include "../Domain/List.h"
 #include <cassert>
 
 
@@ -13,7 +13,7 @@ void testImplicitConstructor(){
 
 }
 
-void testConstructor(){
+void testConstructorList(){
 
     int* array = new int[2];
     array[0] = 1;
@@ -23,7 +23,7 @@ void testConstructor(){
     delete[] array;
 }
 
-void testEqualOperator(){
+void testEqualOperatorList(){
 
     int* array = new int[2];
     array[0] = 1;
@@ -117,8 +117,8 @@ void testDeleteElem()
 void testAllList(){
 
     testImplicitConstructor();
-    testConstructor();
-    testEqualOperator();
+    testConstructorList();
+    testEqualOperatorList();
     testGetCapacity();
     testPushBack();
     testEmpty();
