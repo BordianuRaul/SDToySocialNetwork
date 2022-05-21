@@ -98,11 +98,11 @@ void testGetElem(){
     list.pushBack(12);
     list.pushBack(3);
 
-    assert(list.getElem(1) == 12);
+    assert(list.getElem(1) == 3);
 
 }
 
-void testDeleteElem()
+void testDeleteElemByIterator()
 {
     List<int> list;
 
@@ -112,6 +112,19 @@ void testDeleteElem()
 
     list.deleteElem(1);
     assert(list.size() == 2);
+}
+
+void testDeleteElem(){
+
+    List<int> list;
+
+    list.pushBack(1);
+    list.pushBack(12);
+    list.pushBack(3);
+
+    list.deleteElem(12);
+    assert(list.size() == 2);
+
 }
 
 void testAllList(){
@@ -124,6 +137,7 @@ void testAllList(){
     testEmpty();
     testInsert();
     testGetElem();
+    testDeleteElemByIterator();
     testDeleteElem();
 
 }

@@ -28,3 +28,7 @@ int main() {
 //        -> ce e si in stl
 
 //se pot folosi string-uri
+
+
+//Am incercat sa fac iterator dar am ajuns la aceeasi problema de la delete, daca sterg ce tine de iterator si functia
+//copy din BST, ar trebui sa fie ok.

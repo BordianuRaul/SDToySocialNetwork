@@ -79,6 +79,66 @@ build CMakeFiles/SDToySocialNetwork.dir/Tests/TestBinarySearchTree.cpp.obj: CXX_
   OBJECT_DIR = CMakeFiles\SDToySocialNetwork.dir
   OBJECT_FILE_DIR = CMakeFiles\SDToySocialNetwork.dir\Tests
 
+build CMakeFiles/SDToySocialNetwork.dir/Tests/TestSet.cpp.obj: CXX_COMPILER__SDToySocialNetwork_Debug C$:/Users/Raul/Desktop/Data$ Structures/SDToySocialNetwork1/Tests/TestSet.cpp || cmake_object_order_depends_target_SDToySocialNetwork
+  DEP_FILE = CMakeFiles\SDToySocialNetwork.dir\Tests\TestSet.cpp.obj.d
+  FLAGS = -g -std=gnu++14
+  OBJECT_DIR = CMakeFiles\SDToySocialNetwork.dir
+  OBJECT_FILE_DIR = CMakeFiles\SDToySocialNetwork.dir\Tests
+
+build CMakeFiles/SDToySocialNetwork.dir/Domain/User.cpp.obj: CXX_COMPILER__SDToySocialNetwork_Debug C$:/Users/Raul/Desktop/Data$ Structures/SDToySocialNetwork1/Domain/User.cpp || cmake_object_order_depends_target_SDToySocialNetwork
+  DEP_FILE = CMakeFiles\SDToySocialNetwork.dir\Domain\User.cpp.obj.d
+  FLAGS = -g -std=gnu++14
+  OBJECT_DIR = CMakeFiles\SDToySocialNetwork.dir
+  OBJECT_FILE_DIR = CMakeFiles\SDToySocialNetwork.dir\Domain
+
+build CMakeFiles/SDToySocialNetwork.dir/Tests/TestUser.cpp.obj: CXX_COMPILER__SDToySocialNetwork_Debug C$:/Users/Raul/Desktop/Data$ Structures/SDToySocialNetwork1/Tests/TestUser.cpp || cmake_object_order_depends_target_SDToySocialNetwork
+  DEP_FILE = CMakeFiles\SDToySocialNetwork.dir\Tests\TestUser.cpp.obj.d
+  FLAGS = -g -std=gnu++14
+  OBJECT_DIR = CMakeFiles\SDToySocialNetwork.dir
+  OBJECT_FILE_DIR = CMakeFiles\SDToySocialNetwork.dir\Tests
+
+build CMakeFiles/SDToySocialNetwork.dir/Domain/Friendship.cpp.obj: CXX_COMPILER__SDToySocialNetwork_Debug C$:/Users/Raul/Desktop/Data$ Structures/SDToySocialNetwork1/Domain/Friendship.cpp || cmake_object_order_depends_target_SDToySocialNetwork
+  DEP_FILE = CMakeFiles\SDToySocialNetwork.dir\Domain\Friendship.cpp.obj.d
+  FLAGS = -g -std=gnu++14
+  OBJECT_DIR = CMakeFiles\SDToySocialNetwork.dir
+  OBJECT_FILE_DIR = CMakeFiles\SDToySocialNetwork.dir\Domain
+
+build CMakeFiles/SDToySocialNetwork.dir/Tests/TestFriendship.cpp.obj: CXX_COMPILER__SDToySocialNetwork_Debug C$:/Users/Raul/Desktop/Data$ Structures/SDToySocialNetwork1/Tests/TestFriendship.cpp || cmake_object_order_depends_target_SDToySocialNetwork
+  DEP_FILE = CMakeFiles\SDToySocialNetwork.dir\Tests\TestFriendship.cpp.obj.d
+  FLAGS = -g -std=gnu++14
+  OBJECT_DIR = CMakeFiles\SDToySocialNetwork.dir
+  OBJECT_FILE_DIR = CMakeFiles\SDToySocialNetwork.dir\Tests
+
+build CMakeFiles/SDToySocialNetwork.dir/Domain/Message.cpp.obj: CXX_COMPILER__SDToySocialNetwork_Debug C$:/Users/Raul/Desktop/Data$ Structures/SDToySocialNetwork1/Domain/Message.cpp || cmake_object_order_depends_target_SDToySocialNetwork
+  DEP_FILE = CMakeFiles\SDToySocialNetwork.dir\Domain\Message.cpp.obj.d
+  FLAGS = -g -std=gnu++14
+  OBJECT_DIR = CMakeFiles\SDToySocialNetwork.dir
+  OBJECT_FILE_DIR = CMakeFiles\SDToySocialNetwork.dir\Domain
+
+build CMakeFiles/SDToySocialNetwork.dir/Tests/TestMessage.cpp.obj: CXX_COMPILER__SDToySocialNetwork_Debug C$:/Users/Raul/Desktop/Data$ Structures/SDToySocialNetwork1/Tests/TestMessage.cpp || cmake_object_order_depends_target_SDToySocialNetwork
+  DEP_FILE = CMakeFiles\SDToySocialNetwork.dir\Tests\TestMessage.cpp.obj.d
+  FLAGS = -g -std=gnu++14
+  OBJECT_DIR = CMakeFiles\SDToySocialNetwork.dir
+  OBJECT_FILE_DIR = CMakeFiles\SDToySocialNetwork.dir\Tests
+
+build CMakeFiles/SDToySocialNetwork.dir/Domain/Event.cpp.obj: CXX_COMPILER__SDToySocialNetwork_Debug C$:/Users/Raul/Desktop/Data$ Structures/SDToySocialNetwork1/Domain/Event.cpp || cmake_object_order_depends_target_SDToySocialNetwork
+  DEP_FILE = CMakeFiles\SDToySocialNetwork.dir\Domain\Event.cpp.obj.d
+  FLAGS = -g -std=gnu++14
+  OBJECT_DIR = CMakeFiles\SDToySocialNetwork.dir
+  OBJECT_FILE_DIR = CMakeFiles\SDToySocialNetwork.dir\Domain
+
+build CMakeFiles/SDToySocialNetwork.dir/Tests/TestEvent.cpp.obj: CXX_COMPILER__SDToySocialNetwork_Debug C$:/Users/Raul/Desktop/Data$ Structures/SDToySocialNetwork1/Tests/TestEvent.cpp || cmake_object_order_depends_target_SDToySocialNetwork
+  DEP_FILE = CMakeFiles\SDToySocialNetwork.dir\Tests\TestEvent.cpp.obj.d
+  FLAGS = -g -std=gnu++14
+  OBJECT_DIR = CMakeFiles\SDToySocialNetwork.dir
+  OBJECT_FILE_DIR = CMakeFiles\SDToySocialNetwork.dir\Tests
+
+build CMakeFiles/SDToySocialNetwork.dir/Tests/TestIterator.cpp.obj: CXX_COMPILER__SDToySocialNetwork_Debug C$:/Users/Raul/Desktop/Data$ Structures/SDToySocialNetwork1/Tests/TestIterator.cpp || cmake_object_order_depends_target_SDToySocialNetwork
+  DEP_FILE = CMakeFiles\SDToySocialNetwork.dir\Tests\TestIterator.cpp.obj.d
+  FLAGS = -g -std=gnu++14
+  OBJECT_DIR = CMakeFiles\SDToySocialNetwork.dir
+  OBJECT_FILE_DIR = CMakeFiles\SDToySocialNetwork.dir\Tests
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target SDToySocialNetwork
@@ -87,7 +147,7 @@ build CMakeFiles/SDToySocialNetwork.dir/Tests/TestBinarySearchTree.cpp.obj: CXX_
 #############################################
 # Link the executable SDToySocialNetwork.exe
 
-build SDToySocialNetwork.exe: CXX_EXECUTABLE_LINKER__SDToySocialNetwork_Debug CMakeFiles/SDToySocialNetwork.dir/main.cpp.obj CMakeFiles/SDToySocialNetwork.dir/Tests/TestAll.cpp.obj CMakeFiles/SDToySocialNetwork.dir/Tests/TestList.cpp.obj CMakeFiles/SDToySocialNetwork.dir/Tests/TestNode.cpp.obj CMakeFiles/SDToySocialNetwork.dir/Tests/TestBinarySearchTree.cpp.obj
+build SDToySocialNetwork.exe: CXX_EXECUTABLE_LINKER__SDToySocialNetwork_Debug CMakeFiles/SDToySocialNetwork.dir/main.cpp.obj CMakeFiles/SDToySocialNetwork.dir/Tests/TestAll.cpp.obj CMakeFiles/SDToySocialNetwork.dir/Tests/TestList.cpp.obj CMakeFiles/SDToySocialNetwork.dir/Tests/TestNode.cpp.obj CMakeFiles/SDToySocialNetwork.dir/Tests/TestBinarySearchTree.cpp.obj CMakeFiles/SDToySocialNetwork.dir/Tests/TestSet.cpp.obj CMakeFiles/SDToySocialNetwork.dir/Domain/User.cpp.obj CMakeFiles/SDToySocialNetwork.dir/Tests/TestUser.cpp.obj CMakeFiles/SDToySocialNetwork.dir/Domain/Friendship.cpp.obj CMakeFiles/SDToySocialNetwork.dir/Tests/TestFriendship.cpp.obj CMakeFiles/SDToySocialNetwork.dir/Domain/Message.cpp.obj CMakeFiles/SDToySocialNetwork.dir/Tests/TestMessage.cpp.obj CMakeFiles/SDToySocialNetwork.dir/Domain/Event.cpp.obj CMakeFiles/SDToySocialNetwork.dir/Tests/TestEvent.cpp.obj CMakeFiles/SDToySocialNetwork.dir/Tests/TestIterator.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\SDToySocialNetwork.dir

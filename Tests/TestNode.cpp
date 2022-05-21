@@ -7,13 +7,13 @@
 
 void testConstructorNode(){
 
-    Node<int> node(5);
+    Node<int> node;
 
 }
 
 void testConstructorWithParameters(){
 
-    Node<int> node(15, nullptr, nullptr);
+    Node<int> node(15);
 
 }
 
@@ -24,6 +24,20 @@ void testGetValue(){
 
 }
 
+void testDeepCopyNode(){
+
+    auto* testNode = new Node<int>(5);
+    auto* copyNode = new Node<int>(0);
+
+    copyNode = testNode->deepCopyNode(testNode);
+
+    assert(copyNode != testNode);
+    assert(copyNode->getValue() == testNode->getValue());
+
+    delete copyNode;
+    delete testNode;
+
+}
 
 
 void testAllNode(){
@@ -31,5 +45,6 @@ void testAllNode(){
     testConstructorNode();
     testConstructorWithParameters();
     testGetValue();
+    testDeepCopyNode();
 
 }

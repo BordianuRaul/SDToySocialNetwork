@@ -20,16 +20,19 @@ private:
 
     void privatePrint(Node<T>*);
 
-    void destroyRecursive(Node<T>*);
+    bool privateSearch(Node<T>*, T);
+
+    Node<T>* findSuccessor(Node<T>*);
+
 public:
 
     BinarySearchTree();
 
     explicit BinarySearchTree(Node<T>*);
 
-    ~BinarySearchTree();
+    BinarySearchTree(const BinarySearchTree<T>&);
 
-    BinarySearchTree<T>& operator=(const BinarySearchTree<T>&);
+    ~BinarySearchTree();
 
     bool isEmpty();
 
@@ -38,6 +41,16 @@ public:
     Node<T>* getRoot();
 
     void print();
+
+    bool searchElem(T);
+
+    T getMinim(Node<T>*);
+
+    void destroyRecursive(Node<T>*);
+
+    BinarySearchTree* clone();
+
+    void setRoot(Node<T>*);
 
 };
 
@@ -57,32 +70,15 @@ BinarySearchTree<T>::BinarySearchTree(Node<T>* paramRoot) {
 
 template <class T>
 void BinarySearchTree<T>::destroyRecursive(Node<T> *currentNode) {
-    if(currentNode != nullptr)
-    {
-        destroyRecursive(currentNode->left);
-        destroyRecursive(currentNode->right);
-        delete currentNode;
-    }
+
+   delete currentNode;
+
 }
 
 template <class T>
 BinarySearchTree<T>::~BinarySearchTree<T>() {
 
     destroyRecursive(this->root);
-
-}
-
-template<class T>
-BinarySearchTree<T>& BinarySearchTree<T>::operator=(const BinarySearchTree<T> &rhs) {
-
-    if(this != &rhs)
-    {
-        this->destroyRecursive(this->root);
-        this->root = rhs.root;
-    }
-
-    return *this;
-
 }
 
 template <class T>
@@ -98,16 +94,17 @@ void BinarySearchTree<T>::privateADD(Node<T>* currentNode, T paramValue) {
     if(paramValue < currentNode->value){
         if(currentNode->left != nullptr)
         {
+
             privateADD(currentNode->left, paramValue);
         }else{
-            currentNode->left = new Node<T>(paramValue, nullptr, nullptr);
+            currentNode->left = new Node<T>(paramValue);
         }
     }else{
         if(currentNode->right != nullptr)
         {
             privateADD(currentNode->right, paramValue);
         }else{
-            currentNode->right = new Node<T>(paramValue, nullptr, nullptr);
+            currentNode->right = new Node<T>(paramValue);
         }
     }
 
@@ -129,7 +126,7 @@ template <class T>
 void BinarySearchTree<T>::add(T paramValue) {
 
     if(this->root == nullptr)
-        this->root = new Node<T>(paramValue, nullptr, nullptr);
+        this->root = new Node<T>(paramValue);
     else privateADD(this->root, paramValue);
 
 }
@@ -143,6 +140,86 @@ template <class T>
 void BinarySearchTree<T>::print() {
 
     privatePrint(this->root);
+}
+
+
+template<class T>
+bool BinarySearchTree<T>::privateSearch(Node<T> *currentNode, T paramValue) {
+
+    if(currentNode->getValue() == paramValue)
+        return true;
+    else{
+        if(paramValue < currentNode->getValue())
+        {
+            if(currentNode->left == nullptr)
+                return false;
+            else{
+                privateSearch(currentNode->left, paramValue);
+            }
+        }else{
+            if(currentNode->right == nullptr)
+                return false;
+            else{
+                privateSearch(currentNode->right, paramValue);
+            }
+        }
+    }
+
+
+}
+
+template <class T>
+bool BinarySearchTree<T>::searchElem(T paramValue) {
+
+    if(this->root == nullptr)
+        return false;
+
+    if(this->root->getValue() == paramValue)
+        return true;
+    else return privateSearch(this->root, paramValue);
+
+}
+
+template <class T>
+T BinarySearchTree<T>::getMinim(Node<T> *currentNode) {
+
+    if(currentNode->left != nullptr)
+        getMinim(currentNode->left);
+    else return currentNode->value;
+
+}
+
+template <class T>
+BinarySearchTree<T>* BinarySearchTree<T>::clone() {
+
+    auto* clone = new BinarySearchTree<T>;
+
+    clone->root = this->root->deepCopyNode(this->root);
+
+    return clone;
+}
+
+template <class T>
+Node<T>* BinarySearchTree<T>::findSuccessor(Node<T> *currentNode) {
+
+    if(currentNode->left == nullptr)
+        return currentNode;
+    else findSuccessor(currentNode->left);
+
+}
+
+template <class T>
+void BinarySearchTree<T>::setRoot(Node<T> *newRoot) {
+
+    this->root = newRoot;
+
+}
+
+template <class T>
+BinarySearchTree<T>::BinarySearchTree(const BinarySearchTree<T> &paramTree) {
+
+    this->root = this->root->deepCopyNode(paramTree.root);
+
 }
 
 #endif //SDTOYSOCIALNETWORK_BINARYSEARCHTREE_H

@@ -9,10 +9,10 @@ template <class T>
 class BinarySearchTree;
 
 template <class T>
-        /**
-         * Generic Node entity for an BinaryTree
-         * @tparam T: type of the value retained by the Node
-         */
+/**
+ * Generic Node entity for an BinaryTree
+ * @tparam T: type of the value retained by the Node
+ */
 class Node {
 private:
     T value;
@@ -20,29 +20,28 @@ private:
     Node<T>* right;
 public:
 
-    explicit Node(T value);
+    Node();
 
-    Node(T, Node<T>*, Node<T>*);
+    Node(T);
 
-    ~Node();
-
-    Node<T>& operator=(const Node<T>&);
+    //~Node();
 
     T getValue();
+
+    Node* deepCopyNode(Node<T>*);
 
     friend class BinarySearchTree<T>;
 
 };
 
 template<class T>
-Node<T>::Node(T paramValue)
+Node<T>::Node()
 /**
  * Constructor without parameters
  * @tparam T: type of the Node
  * @param paramValue : value of the Node
  */
 {
-    this->value = paramValue;
     this->left = nullptr;
     this->right = nullptr;
 }
@@ -55,25 +54,24 @@ template<class T>
  * @param paramLeft : Left child
  * @param paramRight : Right child
  */
-Node<T>::Node(T paramValue, Node<T> *paramLeft, Node<T> *paramRight) {
+Node<T>::Node(T paramValue) {
 
     this->value = paramValue;
-    this->left = paramLeft;
-    this->right = paramRight;
+    this->left = nullptr;
+    this->right = nullptr;
 
 }
 
-template<class T>
-/**
- * Destructor
- * @tparam T : type of the Node
- */
-Node<T>::~Node<T>() {
-
-    delete this->left;
-    delete this->right;
-
-}
+//template<class T>
+///**
+// * Destructor
+// * @tparam T : type of the Node
+// */
+//Node<T>::~Node<T>(){
+//
+//    delete this->left;
+//    delete this->right;
+//}
 
 template <class T>
 /**
@@ -84,6 +82,19 @@ T Node<T>::getValue() {
     return this->value;
 }
 
+template <class T>
+Node<T>* Node<T>::deepCopyNode(Node<T> *node) {
+    if(node != nullptr)
+    {
+        auto* copyNode = new Node<T>(node->value);
 
+        copyNode->left = deepCopyNode(node->left);
+
+        copyNode->right = deepCopyNode(node->right);
+
+        return copyNode;
+    }
+    return nullptr;
+}
 
 #endif //SDTOYSOCIALNETWORK_NODE_H

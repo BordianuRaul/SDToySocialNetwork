@@ -7,7 +7,7 @@
 
 template<class T>
         /**
-         * Generic list entity, works like stl Vector
+         * List with generic elements ordered in an ascending order , works like stl Vector
          * @tparam T: type of the elements contained in the list
          */
 class List{
@@ -21,7 +21,7 @@ public:
 
     List(T*, int, int);
 
-    List(List<T>&);
+    List(const List<T>&);
 
     ~List();
 
@@ -41,7 +41,11 @@ public:
 
     T getElem(int);
 
-    void deleteElem(int);
+    void deleteElemByIterator(int);
+
+    void deleteElem(T);
+
+    int searchElem(T);
 
 };
 
@@ -74,19 +78,13 @@ List<T>::List(T *paramList, int paramCapacity, int paramNumberOfElements)
 }
 
 template<class T>
-List<T>::List(List<T> &paramList)
+List<T>::List(const List<T> &paramList)
 /**
  * Copy Constructor
  * @tparam T :type of the list
  * @param paramList :the list
  */
 {
-
-    if(this->list != nullptr)
-    {
-        delete[] this->list;
-        this->list = nullptr;
-    }
 
     this->list = new T[paramList.capacity];
     for(int i = 0; i < paramList.capacity; i++)
@@ -172,7 +170,7 @@ void List<T>::pushBack(T elem)
     if(this->numberOfElements >= this->capacity)
     {
         this->capacity *= 2;
-        T* aux = new T[capacity];
+        T* aux = new T[this->capacity];
 
         for(int i = 0; i < this->numberOfElements; i++)
             aux[i] = this->list[i];
@@ -181,7 +179,12 @@ void List<T>::pushBack(T elem)
         this->list = aux;
     }
 
-    this->list[this->numberOfElements] = elem;
+    int position = searchElem(elem);
+
+    for(int i = this->numberOfElements; i > position; i--)
+        this->list[i] = this->list[i - 1];
+
+    this->list[position] = elem;
     this->numberOfElements++;
 
 }
@@ -233,11 +236,23 @@ void List<T>::insert(int iterator, T elem)
  */
 
 {
+    if(this->numberOfElements + 1 >= this->capacity)
+    {
+        this->capacity *= 2;
+        T* aux = new T[this->capacity];
 
-    this->numberOfElements++;
+        for(int i = 0; i < this->numberOfElements; i++)
+            aux[i] = this->list[i];
+
+        delete[] this->list;
+        this->list = aux;
+    }
+
     for(int i = this->numberOfElements; i > iterator; i--)
         this->list[i] = this->list[i - 1];
     this->list[iterator] = elem;
+
+    this->numberOfElements++;
 
 }
 
@@ -257,7 +272,7 @@ T List<T>::getElem(int iterator)
 }
 
 template<class T>
-void List<T>::deleteElem(int iterator)
+void List<T>::deleteElemByIterator(int iterator)
 /**
  * Deletes element from a position
  * @tparam T : type of list
@@ -268,6 +283,39 @@ void List<T>::deleteElem(int iterator)
 
     for(int i = iterator; i < this->numberOfElements - 1; i++)
         this->list[i] = this->list[i + 1];
+    this->numberOfElements--;
+
+}
+
+template<class T>
+/**
+ * Returns the position of the searched element
+ * @tparam T :type of the list
+ * @param elem :element
+ * @return :position of element
+ */
+int List<T>::searchElem(T elem) {
+
+    int i = 0;
+    while(i < this->numberOfElements && elem > this->list[i])
+        i++;
+
+    return i;
+
+}
+
+template <class T>
+void List<T>::deleteElem(T elem) {
+
+    for(int i = 0; i < this->numberOfElements; i++)
+    {
+        if(this->list[i] == elem)
+        {
+            for(; i < this->numberOfElements; i++)
+                this->list[i] = this->list[i + 1];
+        }
+    }
+
     this->numberOfElements--;
 
 }
