@@ -26,6 +26,12 @@ public:
 
     int getNumberOfUsers();
 
+    UserService& operator=(const UserService&);
+
+    User getUserByID(int);
+
+    List<User> getAllUsers();
+
 };
 
 

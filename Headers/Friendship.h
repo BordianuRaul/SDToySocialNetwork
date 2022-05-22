@@ -9,22 +9,7 @@
 class Friendship {
 private:
     int idFirstUser;
-public:
-    bool operator<(const Friendship &rhs) const;
-
-    bool operator>(const Friendship &rhs) const;
-
-    bool operator<=(const Friendship &rhs) const;
-
-    bool operator>=(const Friendship &rhs) const;
-
-private:
     int idSecondUser;
-public:
-    bool operator==(const Friendship &rhs) const;
-
-    bool operator!=(const Friendship &rhs) const;
-
 public:
 
     Friendship();
@@ -34,6 +19,22 @@ public:
     ~Friendship();
 
     Friendship& operator=(const Friendship&);
+
+    bool operator==(const Friendship &rhs) const;
+
+    bool operator!=(const Friendship &rhs) const;
+
+    bool operator<(const Friendship &rhs) const;
+
+    bool operator>(const Friendship &rhs) const;
+
+    bool operator<=(const Friendship &rhs) const;
+
+    bool operator>=(const Friendship &rhs) const;
+
+    int getIdFirstUser() const;
+
+    int getIdSecondUser() const;
 };
 
 #endif //SDTOYSOCIALNETWORK_FRIENDSHIP_H

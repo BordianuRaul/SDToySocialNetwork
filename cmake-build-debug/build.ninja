@@ -193,6 +193,12 @@ build CMakeFiles/SDToySocialNetwork.dir/Tests/TestEventService.cpp.obj: CXX_COMP
   OBJECT_DIR = CMakeFiles\SDToySocialNetwork.dir
   OBJECT_FILE_DIR = CMakeFiles\SDToySocialNetwork.dir\Tests
 
+build CMakeFiles/SDToySocialNetwork.dir/UserInterface/UserInterface.cpp.obj: CXX_COMPILER__SDToySocialNetwork_Debug C$:/Users/Raul/Desktop/Data$ Structures/SDToySocialNetwork1/UserInterface/UserInterface.cpp || cmake_object_order_depends_target_SDToySocialNetwork
+  DEP_FILE = CMakeFiles\SDToySocialNetwork.dir\UserInterface\UserInterface.cpp.obj.d
+  FLAGS = -g -std=gnu++14
+  OBJECT_DIR = CMakeFiles\SDToySocialNetwork.dir
+  OBJECT_FILE_DIR = CMakeFiles\SDToySocialNetwork.dir\UserInterface
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target SDToySocialNetwork
@@ -201,7 +207,7 @@ build CMakeFiles/SDToySocialNetwork.dir/Tests/TestEventService.cpp.obj: CXX_COMP
 #############################################
 # Link the executable SDToySocialNetwork.exe
 
-build SDToySocialNetwork.exe: CXX_EXECUTABLE_LINKER__SDToySocialNetwork_Debug CMakeFiles/SDToySocialNetwork.dir/main.cpp.obj CMakeFiles/SDToySocialNetwork.dir/Tests/TestAll.cpp.obj CMakeFiles/SDToySocialNetwork.dir/Tests/TestList.cpp.obj CMakeFiles/SDToySocialNetwork.dir/Tests/TestNode.cpp.obj CMakeFiles/SDToySocialNetwork.dir/Tests/TestBinarySearchTree.cpp.obj CMakeFiles/SDToySocialNetwork.dir/Tests/TestSet.cpp.obj CMakeFiles/SDToySocialNetwork.dir/Domain/User.cpp.obj CMakeFiles/SDToySocialNetwork.dir/Tests/TestUser.cpp.obj CMakeFiles/SDToySocialNetwork.dir/Domain/Friendship.cpp.obj CMakeFiles/SDToySocialNetwork.dir/Tests/TestFriendship.cpp.obj CMakeFiles/SDToySocialNetwork.dir/Domain/Message.cpp.obj CMakeFiles/SDToySocialNetwork.dir/Tests/TestMessage.cpp.obj CMakeFiles/SDToySocialNetwork.dir/Domain/Event.cpp.obj CMakeFiles/SDToySocialNetwork.dir/Tests/TestEvent.cpp.obj CMakeFiles/SDToySocialNetwork.dir/Tests/TestIterator.cpp.obj CMakeFiles/SDToySocialNetwork.dir/Tests/TestRepo.cpp.obj CMakeFiles/SDToySocialNetwork.dir/Service/UserService.cpp.obj CMakeFiles/SDToySocialNetwork.dir/Tests/TestUserService.cpp.obj CMakeFiles/SDToySocialNetwork.dir/Service/FriendshipService.cpp.obj CMakeFiles/SDToySocialNetwork.dir/Tests/TestFriendshipService.cpp.obj CMakeFiles/SDToySocialNetwork.dir/Service/MessageService.cpp.obj CMakeFiles/SDToySocialNetwork.dir/Tests/TestMessageService.cpp.obj CMakeFiles/SDToySocialNetwork.dir/Service/EventService.cpp.obj CMakeFiles/SDToySocialNetwork.dir/Tests/TestEventService.cpp.obj
+build SDToySocialNetwork.exe: CXX_EXECUTABLE_LINKER__SDToySocialNetwork_Debug CMakeFiles/SDToySocialNetwork.dir/main.cpp.obj CMakeFiles/SDToySocialNetwork.dir/Tests/TestAll.cpp.obj CMakeFiles/SDToySocialNetwork.dir/Tests/TestList.cpp.obj CMakeFiles/SDToySocialNetwork.dir/Tests/TestNode.cpp.obj CMakeFiles/SDToySocialNetwork.dir/Tests/TestBinarySearchTree.cpp.obj CMakeFiles/SDToySocialNetwork.dir/Tests/TestSet.cpp.obj CMakeFiles/SDToySocialNetwork.dir/Domain/User.cpp.obj CMakeFiles/SDToySocialNetwork.dir/Tests/TestUser.cpp.obj CMakeFiles/SDToySocialNetwork.dir/Domain/Friendship.cpp.obj CMakeFiles/SDToySocialNetwork.dir/Tests/TestFriendship.cpp.obj CMakeFiles/SDToySocialNetwork.dir/Domain/Message.cpp.obj CMakeFiles/SDToySocialNetwork.dir/Tests/TestMessage.cpp.obj CMakeFiles/SDToySocialNetwork.dir/Domain/Event.cpp.obj CMakeFiles/SDToySocialNetwork.dir/Tests/TestEvent.cpp.obj CMakeFiles/SDToySocialNetwork.dir/Tests/TestIterator.cpp.obj CMakeFiles/SDToySocialNetwork.dir/Tests/TestRepo.cpp.obj CMakeFiles/SDToySocialNetwork.dir/Service/UserService.cpp.obj CMakeFiles/SDToySocialNetwork.dir/Tests/TestUserService.cpp.obj CMakeFiles/SDToySocialNetwork.dir/Service/FriendshipService.cpp.obj CMakeFiles/SDToySocialNetwork.dir/Tests/TestFriendshipService.cpp.obj CMakeFiles/SDToySocialNetwork.dir/Service/MessageService.cpp.obj CMakeFiles/SDToySocialNetwork.dir/Tests/TestMessageService.cpp.obj CMakeFiles/SDToySocialNetwork.dir/Service/EventService.cpp.obj CMakeFiles/SDToySocialNetwork.dir/Tests/TestEventService.cpp.obj CMakeFiles/SDToySocialNetwork.dir/UserInterface/UserInterface.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\SDToySocialNetwork.dir

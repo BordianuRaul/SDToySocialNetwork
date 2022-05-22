@@ -33,3 +33,24 @@ int FriendshipService::getNumberOfFriendships() {
     return this->friendships.getSize();
 
 }
+
+List<int> FriendshipService::getUserFriendList(int userID) {
+
+    List<Friendship> allFriendships = this->friendships.read();
+    List<int> userFriendList;
+
+    for(int i = 0; i < allFriendships.size(); i++)
+        if(allFriendships.getElem(i).getIdFirstUser() == userID)
+            userFriendList.pushBack(allFriendships.getElem(i).getIdSecondUser());
+
+    return userFriendList;
+}
+
+FriendshipService& FriendshipService::operator=(const FriendshipService &rhs) {
+
+    if(this != &rhs){
+        this->friendships = rhs.friendships;
+    }
+
+    return *this;
+}

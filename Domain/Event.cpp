@@ -91,3 +91,11 @@ bool Event::operator!=(const Event &rhs) const {
 int Event::getId() const {
     return this->eventId;
 }
+
+std::string Event::getEventDescription() {
+    return this->eventDescription;
+}
+
+std::string Event::getEventDate() {
+    return this->date;
+}

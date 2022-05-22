@@ -62,3 +62,15 @@ bool Message::operator<=(const Message &rhs) const {
 bool Message::operator>=(const Message &rhs) const {
     return !(*this < rhs);
 }
+
+int Message::getSenderID() const {
+    return this->senderID;
+}
+
+int Message::getReceiverID() const {
+    return this->receiverID;
+}
+
+std::string Message::getMessage() {
+    return this->message;
+}

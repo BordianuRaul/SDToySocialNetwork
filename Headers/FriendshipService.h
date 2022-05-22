@@ -23,6 +23,10 @@ public:
 
     int getNumberOfFriendships();
 
+    List<int> getUserFriendList(int);
+
+    FriendshipService& operator=(const FriendshipService&);
+
 
 };
 

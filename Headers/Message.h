@@ -14,6 +14,15 @@ private:
     int receiverID;
     std::string message;
 public:
+
+    Message();
+
+    Message(int, int, std::string);
+
+    ~Message();
+
+    Message& operator=(const Message&);
+
     bool operator==(const Message &rhs) const;
 
     bool operator<(const Message &rhs) const;
@@ -26,15 +35,11 @@ public:
 
     bool operator!=(const Message &rhs) const;
 
-public:
+    int getSenderID() const;
 
-    Message();
+    int getReceiverID() const;
 
-    Message(int, int, std::string);
-
-    ~Message();
-
-    Message& operator=(const Message&);
+    std::string getMessage();
 
 };
 

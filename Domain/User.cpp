@@ -43,11 +43,11 @@ int User::getID() const {
     return this->id;
 }
 
-std::string User::getName() {
+std::string User::getName() const{
     return this->name;
 }
 
-std::string User::getCity() {
+std::string User::getCity() const{
     return this->city;
 }
 

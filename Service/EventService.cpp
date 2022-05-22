@@ -68,3 +68,13 @@ void EventService::addMaybe(int eventId, const User &paramUser) {
             return;
         }
 }
+
+EventService& EventService::operator=(const EventService &rhs) {
+    if(this != &rhs)
+        this->events = rhs.events;
+    return *this;
+}
+
+List<Event> EventService::getEvents() {
+    return this->events.read();
+}

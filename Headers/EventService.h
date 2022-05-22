@@ -30,6 +30,10 @@ public:
 
     void addMaybe(int, const User&);
 
+    EventService& operator=(const EventService&);
+
+    List<Event> getEvents();
+
 };
 
 

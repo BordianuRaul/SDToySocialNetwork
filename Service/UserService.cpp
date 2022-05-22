@@ -51,3 +51,28 @@ int UserService::getNumberOfUsers() {
 
     return this->users.getSize();
 }
+
+UserService& UserService::operator=(const UserService &rhs) {
+    if(this != &rhs)
+        this->users = rhs.users;
+    return *this;
+}
+
+User UserService::getUserByID(int id) {
+
+    User searchedUser;
+
+    List<User> listOfUsers;
+    listOfUsers = this->users.read();
+
+    for(int i = 0; i < listOfUsers.size(); i++)
+    {
+        if(listOfUsers.getElem(i).getID() == id)
+            return listOfUsers.getElem(i);
+    }
+
+}
+
+List<User> UserService::getAllUsers() {
+    return this->users.read();
+}

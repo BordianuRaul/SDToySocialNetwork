@@ -14,12 +14,6 @@ class Event {
 private:
     int eventId;
     std::string eventDescription;
-public:
-    bool operator==(const Event &rhs) const;
-
-    bool operator!=(const Event &rhs) const;
-
-private:
     std::string date;
     Set<User> attendees;
     Set<User> interested;
@@ -33,6 +27,10 @@ public:
     ~Event();
 
     int getId() const;
+
+    std::string getEventDescription();
+
+    std::string getEventDate();
 
     Set<User> getAttendees();
 
@@ -56,6 +54,9 @@ public:
 
     bool operator>=(const Event &rhs) const;
 
+    bool operator==(const Event &rhs) const;
+
+    bool operator!=(const Event &rhs) const;
 };
 
 

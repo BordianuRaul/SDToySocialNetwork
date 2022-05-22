@@ -21,6 +21,10 @@ public:
     void deleteMessage(int, int, const std::string&);
 
     int getNumberOfMessages();
+
+    List<std::string> getConversation(int, int);
+
+    MessageService& operator=(const MessageService&);
 };
 
 

@@ -26,6 +26,8 @@ public:
 
     List<T> read();
 
+    Repository& operator=(const Repository<T>&);
+
 };
 
 template <class T>
@@ -52,6 +54,14 @@ int Repository<T>::getSize() {
 template <class T>
 List<T> Repository<T>::read() {
     return this->elements;
+}
+
+template <class T>
+Repository<T>& Repository<T>::operator=(const Repository<T> &rhs){
+
+    if(this != &rhs)
+        this->elements =rhs.elements;
+    return *this;
 }
 
 #endif //SDTOYSOCIALNETWORK_REPOSITORY_H

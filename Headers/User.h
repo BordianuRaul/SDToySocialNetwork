@@ -23,12 +23,17 @@ public:
     ~User();
 
     int getID() const;
-    std::string getName();
-    std::string getCity();
+
+    std::string getName() const;
+
+    std::string  getCity() const;
+
     int getAge() const;
 
     void setName(const std::string&);
+
     void setCity(const std::string&);
+
     void setAge(int);
 
     User& operator=(const User&);

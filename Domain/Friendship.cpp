@@ -52,3 +52,11 @@ bool Friendship::operator<=(const Friendship &rhs) const {
 bool Friendship::operator>=(const Friendship &rhs) const {
     return !(*this < rhs);
 }
+
+int Friendship::getIdFirstUser() const {
+    return this->idFirstUser;
+}
+
+int Friendship::getIdSecondUser() const {
+    return this->idSecondUser;
+}
