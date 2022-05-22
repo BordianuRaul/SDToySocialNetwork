@@ -311,7 +311,7 @@ void List<T>::deleteElem(T elem) {
     {
         if(this->list[i] == elem)
         {
-            for(; i < this->numberOfElements; i++)
+            for(; i < this->numberOfElements - 1; i++)
                 this->list[i] = this->list[i + 1];
         }
     }

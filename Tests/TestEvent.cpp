@@ -8,13 +8,13 @@
 
 void testConstructorEvent(){
 
-    Event event("Party", "12/10/2022");
+    Event event(1,"Party", "12/10/2022");
 
 }
 
 void testAddAttendeeEvent(){
 
-    Event event("Party", "12/10/2022");
+    Event event(1,"Party", "12/10/2022");
 
     User attendee(1, "Mihai", "Cluj", 20);
 
@@ -25,7 +25,7 @@ void testAddAttendeeEvent(){
 }
 
 void testAddInterestedEvent(){
-    Event event("Party", "12/10/2022");
+    Event event(1,"Party", "12/10/2022");
 
     User interested(1, "Mihai", "Cluj", 20);
 
@@ -36,7 +36,7 @@ void testAddInterestedEvent(){
 
 void testAddMaybe(){
 
-    Event event("Party", "12/10/2022");
+    Event event(1,"Party", "12/10/2022");
 
     User maybe(1, "Mihai", "Cluj", 20);
 

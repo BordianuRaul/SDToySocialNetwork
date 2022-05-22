@@ -11,6 +11,11 @@
 #include "../Headers/TestMessage.h"
 #include "../Headers/TestEvent.h"
 #include "../Headers/TestIterator.h"
+#include "../Headers/TestRepo.h"
+#include "../Headers/TestUserService.h"
+#include "../Headers/TestFriendshipService.h"
+#include "../Headers/TestMessageService.h"
+#include "../Headers/TestEventService.h"
 
 void testAll()
 {
@@ -23,6 +28,11 @@ void testAll()
     testAllMessage();
     testAllEvent();
     testAllIterator();
+    testAllRepo();
+    testAllUserService();
+    testAllFriendshipService();
+    testAllMessageService();
+    testAllEventService();
 
 }
 

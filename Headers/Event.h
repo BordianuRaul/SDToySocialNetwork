@@ -12,16 +12,27 @@
 class Event {
 
 private:
+    int eventId;
     std::string eventDescription;
+public:
+    bool operator==(const Event &rhs) const;
+
+    bool operator!=(const Event &rhs) const;
+
+private:
     std::string date;
     Set<User> attendees;
     Set<User> interested;
     Set<User> maybe;
-
 public:
-    Event(std::string, std::string);
+    public:
+    Event();
+
+    Event(int, std::string, std::string);
 
     ~Event();
+
+    int getId() const;
 
     Set<User> getAttendees();
 
@@ -34,6 +45,16 @@ public:
     void addInterested(const User&);
 
     void addMaybe(const User&);
+
+    Event& operator=(const Event&);
+
+    bool operator<(const Event &rhs) const;
+
+    bool operator>(const Event &rhs) const;
+
+    bool operator<=(const Event &rhs) const;
+
+    bool operator>=(const Event &rhs) const;
 
 };
 

@@ -13,12 +13,28 @@ private:
     int senderID;
     int receiverID;
     std::string message;
+public:
+    bool operator==(const Message &rhs) const;
+
+    bool operator<(const Message &rhs) const;
+
+    bool operator>(const Message &rhs) const;
+
+    bool operator<=(const Message &rhs) const;
+
+    bool operator>=(const Message &rhs) const;
+
+    bool operator!=(const Message &rhs) const;
 
 public:
+
+    Message();
 
     Message(int, int, std::string);
 
     ~Message();
+
+    Message& operator=(const Message&);
 
 };
 

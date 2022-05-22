@@ -31,6 +31,8 @@ public:
     void remove(T);
 
     T getElem(int);
+
+    Set<T>& operator=(const Set<T>&);
 };
 
 template <class T>
@@ -89,6 +91,24 @@ template <class T>
 T Set<T>::getElem(int position) {
 
     return this->orderedElements.getElem(position);
+
+}
+
+template <class T>
+Set<T>& Set<T>::operator=(const Set<T> &rhs) {
+
+    if(this != &rhs) {
+        this->orderedElements = rhs.orderedElements;
+
+        auto* newRoot = new Node<T>(this->orderedElements.getElem(0));
+        this->elements.setRoot(newRoot);
+
+        for(int  i = 1; i < this->orderedElements.size(); i++)
+        {
+            this->elements.add(this->orderedElements.getElem(i));
+        }
+    }
+    return *this;
 
 }
 

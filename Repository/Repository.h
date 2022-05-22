@@ -9,16 +9,49 @@
 #include "../Domain/List.h"
 #include "../Headers/User.h"
 
-template <class T>
+template<class T>
 class Repository {
 private:
-    List<T> elements;
+    List <T> elements;
 public:
     Repository();
 
+    ~Repository();
 
+    void addElem(T elem);
+
+    void deleteRepo(T elem);
+
+    int getSize();
+
+    List<T> read();
 
 };
 
+template <class T>
+Repository<T>::Repository() = default;
+
+template <class T>
+Repository<T>::~Repository<T>() = default;
+
+template <class T>
+void Repository<T>::addElem(T elem) {
+    this->elements.pushBack(elem);
+}
+
+template <class T>
+void Repository<T>::deleteRepo(T elem) {
+    this->elements.deleteElem(elem);
+}
+
+template <class T>
+int Repository<T>::getSize() {
+    return this->elements.size();
+}
+
+template <class T>
+List<T> Repository<T>::read() {
+    return this->elements;
+}
 
 #endif //SDTOYSOCIALNETWORK_REPOSITORY_H

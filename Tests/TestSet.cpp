@@ -60,12 +60,26 @@ void testGetElemSet(){
 
 }
 
+void testAssigmentOperatorSet(){
+    Set<int> set;
+
+    set.insert(5);
+    set.insert(-12);
+    set.insert(20);
+
+    Set<int> assignSet;
+
+    assignSet = set;
+
+    assert(assignSet.getElements().getRoot()->getValue() == -12);
+}
 
 void testAllSet(){
 
     testConstructorWithoutParametersSet();
     testIfExistSet();
     testInsertSet();
-   testRemoveElemSet();
+    testRemoveElemSet();
     testGetElemSet();
+    testAssigmentOperatorSet();
 }

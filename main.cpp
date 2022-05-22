@@ -1,21 +1,13 @@
-
 #include "Headers/TestAll.h"
-#include <vector>
-#include <set>
 
 int main() {
 
     testAll();
-
-    std::set<int> set;
-
-
-
 }
-//multime cu reprezentare pe arbore binar de cautare (construim arborele sau il importam?)
-//REPO generic (copy paste de la oop?)
+//multime cu reprezentare pe arbore binar de cautare (construim arborele sau il importam?) Contruim + DONE
+//REPO generic (copy paste de la oop?) NOPE
 
-//Clasele: utilizator, prietenie, mesaj
+//Clasele: utilizator, prietenie, mesaj Done
 //Relatiile dintre entitati
 
 //CRUD, add friend, send message
