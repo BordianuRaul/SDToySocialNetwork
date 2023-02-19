@@ -33,6 +33,8 @@ public:
     T getElem(int);
 
     Set<T>& operator=(const Set<T>&);
+
+    List<T> getOrderedElems() const;
 };
 
 template <class T>
@@ -112,5 +114,9 @@ Set<T>& Set<T>::operator=(const Set<T> &rhs) {
 
 }
 
+template <class T>
+List<T> Set<T>::getOrderedElems() const{
+    return this->orderedElements;
+}
 
 #endif //SDTOYSOCIALNETWORK_SET_H

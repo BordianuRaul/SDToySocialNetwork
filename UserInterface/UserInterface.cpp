@@ -128,7 +128,7 @@ int UserInterface::userConsole(const User& currentUser) {
         this->showUserConsole();
 
         int option;
-        cout << "Introduceti optiunea: ";
+        cout << "Introduceti optiune=: ";
         cin >> option;
         cout << endl;
 

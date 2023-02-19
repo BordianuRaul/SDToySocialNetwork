@@ -1,3 +1,3 @@
-C:/Users/Raul/Desktop/Data Structures/SDToySocialNetwork1/cmake-build-debug/CMakeFiles/SDToySocialNetwork.dir
-C:/Users/Raul/Desktop/Data Structures/SDToySocialNetwork1/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/Raul/Desktop/Data Structures/SDToySocialNetwork1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/Raul/Desktop/Facultate/Anul I sem 2/Data Structures/Bordianu_Raul_Ovidiu_311/SDToySocialNetwork1/cmake-build-debug/CMakeFiles/SDToySocialNetwork.dir
+C:/Users/Raul/Desktop/Facultate/Anul I sem 2/Data Structures/Bordianu_Raul_Ovidiu_311/SDToySocialNetwork1/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Raul/Desktop/Facultate/Anul I sem 2/Data Structures/Bordianu_Raul_Ovidiu_311/SDToySocialNetwork1/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -78,3 +78,51 @@ EventService& EventService::operator=(const EventService &rhs) {
 List<Event> EventService::getEvents() {
     return this->events.read();
 }
+
+List<User> EventService::getAttendees(int eventID) {
+    List<User> attendees;
+    List<Event> allEvents;
+    allEvents = this->events.read();
+
+    for(int i = 0; i < allEvents.size(); i++){
+        if(allEvents.getElem(i).getId() == eventID)
+        {
+            attendees = allEvents.getElem(i).getAttendees().getOrderedElems();
+            return attendees;
+        }
+    }
+
+    return attendees;
+}
+
+List<User> EventService::getInterested(int eventID) {
+    List<User> interested;
+    List<Event> allEvents;
+    allEvents = this->events.read();
+
+    for(int i = 0; i < allEvents.size(); i++){
+        if(allEvents.getElem(i).getId() == eventID)
+        {
+            interested = allEvents.getElem(i).getInterested().getOrderedElems();
+            return interested;
+        }
+    }
+
+    return interested;
+}
+
+List<User> EventService::getMaybe(int eventID) {
+    List<User> maybe;
+    List<Event> allEvents;
+    allEvents = this->events.read();
+
+    for(int i = 0; i < allEvents.size(); i++){
+        if(allEvents.getElem(i).getId() == eventID)
+        {
+            maybe = allEvents.getElem(i).getMaybe().getOrderedElems();
+            return maybe;
+        }
+    }
+
+    return maybe;
+}

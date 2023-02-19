@@ -27,6 +27,8 @@ public:
 
     static void showUserConsole();
 
+    static void showListsOfParticipants();
+
     int firstConsole();
 
     void runConsole();

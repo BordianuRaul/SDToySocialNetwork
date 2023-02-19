@@ -52,11 +52,25 @@ void testDeleteUserService(){
     assert(testService.getNumberOfUsers() == 1);
 }
 
+void testGetUserByIdUserService(){
+
+    UserService testService;
+
+    testService.createUser(1, "Mihai", "Cluj", 20);
+    testService.createUser(2, "Radu", "Brasov", 19);
+
+    User testUser(1, "Mihai", "Cluj", 20);
+
+    assert(testService.getUserByID(1) == testUser);
+
+}
+
 void testAllUserService(){
 
     testConstructorUserService();
     testCreateUserService();
     testUpdateUserService();
     testDeleteUserService();
+    testGetUserByIdUserService();
 
 }

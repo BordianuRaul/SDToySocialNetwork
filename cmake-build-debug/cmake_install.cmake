@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/Raul/Desktop/Data Structures/SDToySocialNetwork1
+# Install script for directory: C:/Users/Raul/Desktop/Facultate/Anul I sem 2/Data Structures/Bordianu_Raul_Ovidiu_311/SDToySocialNetwork1
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/Raul/Desktop/Data Structures/SDToySocialNetwork1/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/Raul/Desktop/Facultate/Anul I sem 2/Data Structures/Bordianu_Raul_Ovidiu_311/SDToySocialNetwork1/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

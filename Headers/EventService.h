@@ -30,6 +30,12 @@ public:
 
     void addMaybe(int, const User&);
 
+    List<User> getAttendees(int);
+
+    List<User> getInterested(int);
+
+    List<User> getMaybe(int);
+
     EventService& operator=(const EventService&);
 
     List<Event> getEvents();
